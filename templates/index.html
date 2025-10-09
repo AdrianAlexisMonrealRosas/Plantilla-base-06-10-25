@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Plantilla Base{% endblock %}
+
+{% block content %}
+  <div class="text-center mb-5">
+    <h2>Bienvenido a la plantilla base</h2>
+    <p class="lead">Hecho por Adrian Alexis Monreal Rosas...</p>
+  </div>
+
+  <section class="container mt-4">
+    <h3>Contenido en esta página</h3>
+    <p>En esta página encontrarás información detallada sobre estos 4 temas: animales exóticos, vehículos antiguos, las
+      maravillas del mundo e información personal sobre el creador.</p>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/animales-exoticos.jpg') }}" class="card-img-fixed" alt="Animales exóticos">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Animales exóticos</h5>
+            <p class="card-text">
+              Los animales exóticos son especies que no son comunes en una determinada región o que provienen de hábitats lejanos,
+              como selvas tropicales, desiertos o selvas africanas. Suelen tener características únicas en su aspecto,
+              comportamiento o alimentación, lo que los hace muy llamativos. Sin embargo, muchos requieren cuidados especiales
+              y no se adaptan fácilmente a la vida doméstica. Algunos ejemplos son el camaleón, el hurón, el loro amazónico o el fennec.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/OIP.webp') }}" class="card-img-fixed" alt="Vehículos antiguos">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Vehículos antiguos</h5>
+            <p class="card-text">
+              Los vehículos antiguos son automóviles fabricados hace varias décadas que hoy se consideran piezas de colección
+              por su diseño clásico, valor histórico y mecánica tradicional. Representan una época pasada del transporte y la ingeniería,
+              y suelen ser restaurados y conservados por aficionados. Ejemplos famosos incluyen el Ford Modelo T,
+              el Volkswagen Escarabajo y el Chevrolet Bel Air.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/siete-maravillas-mundo-moderno.jpg') }}" class="card-img-fixed" alt="Maravillas del mundo">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Maravillas del mundo</h5>
+            <p class="card-text">
+              Las Maravillas del Mundo son monumentos y construcciones reconocidas por su gran valor histórico, cultural y arquitectónico.
+              Representan logros impresionantes de distintas civilizaciones a lo largo del tiempo.
+              Entre las más conocidas están las Siete Maravillas del Mundo Moderno, como la Gran Muralla China, el Coliseo Romano,
+              Machu Picchu y Chichén Itzá, que destacan por su belleza, historia y significado para la humanidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/marca-personal-mk-personal-branding-personal.jpg') }}" class="card-img-fixed" alt="Acerca del creador">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Acerca del creador</h5>
+            <p class="card-text">
+              El creador dará un poco de información personal para reconocer su página web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

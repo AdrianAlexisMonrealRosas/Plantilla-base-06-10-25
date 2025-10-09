@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Acerca de...{% endblock %}
+
+{% block content %}
+  <div class="text-center mb-5">
+    <h2 class="text-primary">Acerca del Creador</h2>
+    <p class="lead">Conoce un poco sobre el autor de esta página web</p>
+  </div>
+
+  <div class="card-group">
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/Evernight.jpeg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Videojuegos</h5>
+      <p class="card-text">Me gustan mucho los videojuegos y me gusta ver los diseños que estos tienen como en paisajes, personajes y su historia, disfruto mucho ver la historia de algun juego y ver teorias de esta</p>
+      <p class="card-text"><small class="text-body-secondary">Mi personaje favorito en un juego</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <iframe  src="https://www.youtube.com/embed/KlCAW0hwEmM" 
+            frameborder="0" 
+            allowfullscreen
+            style="width:100%; height:180px;" class="card-img-top">
+    </iframe>
+    <div class="card-body">
+      <h5 class="card-title">Musica</h5>
+      <p class="card-text">Me gusta demasiado escuchar musica, estoy haciendolo todo el dia y no me canso nunca, puedo escuchar de todo y disfrutarlo sin ningun problema</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+{% endblock %}

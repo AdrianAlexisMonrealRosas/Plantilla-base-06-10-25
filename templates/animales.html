@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Animales Exóticos{% endblock %}
+
+{% block content %}
+<section class="container mt-4">
+    <h3>El reino animal...</h3>
+    <p>El reino animal es fascinante por su diversidad y complejidad. Incluye millones de especies que habitan casi
+        todos los rincones del planeta, desde los océanos más profundos hasta las cimas de las montañas. Los animales se
+        caracterizan por ser organismos multicelulares, heterótrofos (se alimentan de otros seres vivos), y la mayoría
+        tiene movilidad y sistemas sensoriales desarrollados. Su comportamiento, adaptaciones y formas de comunicación
+        hacen que cada especie sea única y sorprendente.</p>
+</section>
+<h4>Animales exoticos del reino animal</h4>
+<h6>Acuaticos🫧</h6>
+<div class="card-group">
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/opoo.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Medusa inmortal</h5>
+      <p class="card-text">Vive en aguas templadas y tropicales de todo el mundo.
+
+Es famosa porque puede revertir su ciclo de vida, volviendo a estado juvenil y teóricamente viviendo indefinidamente.
+
+Un ejemplo increíble de adaptación y supervivencia extrema.</p>
+      <p class="card-text"><small class="text-body-secondary">(Turritopsis dohrnii)</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/pez.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pez mandarín</h5>
+      <p class="card-text">Originario de los arrecifes de coral del Pacífico occidental.
+
+Destaca por sus colores vibrantes y patrones complejos que parecen pinturas.
+
+Aunque es pequeño, su belleza lo convierte en un símbolo de biodiversidad marina.</p>
+      <p class="card-text"><small class="text-body-secondary">Synchiropus splendidus</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/tib.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tiburón duende</h5>
+      <p class="card-text">Vive en aguas profundas y es extremadamente raro de ver.
+
+Posee un hocico alargado y dientes prominentes que le dan un aspecto casi prehistórico.
+
+Es un ejemplo de cómo la evolución adapta a los animales a ambientes extremos.</p>
+      <p class="card-text"><small class="text-body-secondary">Mitsukurina owstoni</small></p>
+    </div>
+  </div>
+</div>
+<h6>Aereos🍃</h6>
+<div class="card-group">
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/coli.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Guacamayo jacinto</h5>
+      <p class="card-text">Es el loro más grande del mundo y tiene un azul intenso impresionante.
+
+Habita en el Pantanal y en zonas de Brasil, Bolivia y Paraguay.
+
+Su plumaje y comportamiento social lo convierten en un espectáculo natural</p>
+      <p class="card-text"><small class="text-body-secondary">Anodorhynchus hyacinthinus</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/paj.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Colibrí abeja</h5>
+      <p class="card-text">Es el ave más pequeña del mundo, originaria de Cuba.
+
+Su vuelo es rapidísimo y puede mantenerse en suspensión mientras se alimenta de néctar.
+
+Es un ejemplo perfecto de adaptación extrema a la vida aérea.</p>
+      <p class="card-text"><small class="text-body-secondary">Mellisuga helenae</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/lec.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Águila harpía</h5>
+      <p class="card-text">Es una de las aves rapaces más grandes y poderosas del mundo.
+
+Vive en selvas tropicales de Centro y Sudamérica.
+
+Sus garras gigantes y fuerza impresionante la convierten en una cazadora casi perfecta.</p>
+      <p class="card-text"><small class="text-body-secondary">Harpia harpyja</small></p>
+    </div>
+  </div>
+</div>
+<h6>Terrestres🪨</h6>
+<div class="card-group">
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/lag.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Dragón de Komodo</h5>
+      <p class="card-text">El lagarto más grande del mundo, que puede superar los 3 metros de longitud.
+
+Habita en islas de Indonesia como Komodo y Rinca.
+
+Su fuerza, agilidad y sentido del olfato lo hacen un depredador temible y fascinante.</p>
+      <p class="card-text"><small class="text-body-secondary">Varanus komodoensis</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/aye.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Aye-aye</h5>
+      <p class="card-text">Un primate nocturno de Madagascar.
+
+Tiene dedos extremadamente delgados y largos que usa para sacar insectos de la madera.
+
+Su aspecto extraño lo hace único, pero cumple un papel importante en su ecosistema.</p>
+      <p class="card-text"><small class="text-body-secondary">Daubentonia madagascariensis</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ url_for('static', filename='img/poo.webp') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Okapi</h5>
+      <p class="card-text">Pariente cercano de la jirafa, pero mucho más pequeño y con patas rayadas como las cebras.
+
+Vive en los bosques densos del Congo y es muy esquivo.
+
+Su existencia muestra cómo la naturaleza puede crear combinaciones de rasgos sorprendentes.</p>
+      <p class="card-text"><small class="text-body-secondary">Okapia johnstoni</small></p>
+    </div>
+  </div>
+</div>
+    {% endblock %}

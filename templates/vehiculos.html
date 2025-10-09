@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Vehículos Antiguos{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h2 class="text-primary">Vehículos Antiguos</h2>
+    <p class="lead">Descubre los autos clásicos que marcaron historia y siguen siendo admirados por su diseño y mecánica
+    </p>
+</div>
+
+<h5>Un poco de historia de los vehiculos antiguos</h5>
+<p>El transporte ha evolucionado desde carretas y carruajes tirados por caballos hasta los modernos automóviles. El
+    primer vehículo autopropulsado considerado como automóvil fue creado por Nicolas-Joseph Cugnot en 1769 en Francia;
+    era un vehículo de vapor diseñado para transportar artillería.
+    Ya en el siglo XIX, inventores como Karl Benz desarrollaron los primeros automóviles con motor de combustión
+    interna. En 1886, Benz patentó el Benz Patent-Motorwagen, considerado el primer automóvil práctico. Con esto comenzó
+    la revolución del transporte personal y la industria automotriz, que se expandió por Europa y América a principios
+    del siglo XX.</p>
+<h6>5 Vehiculos antiguos</h6>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <iframe src="https://www.youtube.com/HwHAzL3D3u8" 
+            frameborder="0" 
+            allowfullscreen
+            style="width:100%; height:180px;">
+    </iframe>
+      <div class="card-body">
+        <h5 class="card-title">Ford – Ford Model T (1908)</h5>
+        <p class="card-text">Fue el primer automóvil producido en masa, revolucionando la industria y haciendo que los autos fueran accesibles para la gente común.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/car.webp') }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Chevrolet – Chevrolet Series 490 (1915)</h5>
+        <p class="card-text">Competencia directa del Ford Model T, ayudó a establecer a Chevrolet como una marca popular en Estados Unidos.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/car1.webp') }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Benz – Mercedes-Benz 300 SL “Gullwing” (1954)</h5>
+        <p class="card-text">Famoso por sus puertas tipo ala de gaviota y su elegante diseño deportivo, es un ícono de la ingeniería alemana.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/caf.webp') }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Volkswagen – Volkswagen Beetle (1938)</h5>
+        <p class="card-text">Conocido como el “Escarabajo”, fue diseñado para ser un auto económico y resistente, y se convirtió en uno de los autos más vendidos de la historia.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/car3.webp') }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cadillac – Cadillac V16 (1930)</h5>
+        <p class="card-text">Un automóvil de lujo con un motor potente y tecnología avanzada para su época, símbolo del estilo y la opulencia de los años 30.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

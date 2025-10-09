@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Maravillas del Mundo{% endblock %}
+
+{% block content %}
+  <div class="text-center mb-5">
+    <h2 class="text-primary">Las 7 Maravillas del Mundo Moderno</h2>
+    <p class="lead">Descubre las construcciones más impresionantes y significativas de la humanidad</p>
+  </div>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/mur.webp') }}" class="card-img-fixed" alt="Maravilla 1">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Gran Muralla China</h5>
+            <p class="card-text">La Gran Muralla China es una impresionante obra de ingeniería construida para proteger el imperio chino.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/pet.webp') }}" class="card-img-fixed" alt="Maravilla 2">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Petra</h5>
+            <p class="card-text">Petra es la ciudad tallada en piedra en Jordania, famosa por su arquitectura y su historia como antigua ciudad nabatea.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/cristo.webp') }}" class="card-img-fixed" alt="Maravilla 3">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Cristo Redentor</h5>
+            <p class="card-text">El Cristo Redentor es la icónica estatua en Río de Janeiro, Brasil, símbolo de la ciudad y de la fe cristiana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/descargar.webp') }}" class="card-img-fixed" alt="Maravilla 4">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Machu Picchu</h5>
+            <p class="card-text">Machu Picchu es la ciudadela inca ubicada en Perú, rodeada de montañas impresionantes y con gran valor histórico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/OIP.webp') }}" class="card-img-fixed" alt="Maravilla 5">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Chichén Itzá</h5>
+            <p class="card-text">Chichén Itzá es la ciudad maya en México famosa por la pirámide de Kukulkán y su valor cultural e histórico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/col.webp') }}" class="card-img-fixed" alt="Maravilla 6">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">El Coliseo Romano</h5>
+            <p class="card-text">El Coliseo Romano es uno de los anfiteatros más grandes y famosos del mundo, símbolo de la ingeniería y cultura romana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-transparent mb-3">
+    <div class="card border-info bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/taj.webp') }}" class="card-img-fixed" alt="Maravilla 7">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Taj Mahal</h5>
+            <p class="card-text">El Taj Mahal es el famoso mausoleo de India, símbolo del amor eterno y de la arquitectura mogol del siglo XVII.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
