@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Vehículos Antiguos{% endblock %}
+
+{% block content %}
+<body>
+    <div class="containter justify-content">
+        <h1>Crea tu cuenta</h1>
+        <form id="registroForm">
+            <div class="mb-3">
+                <label for="exampleInputusuario" class="form-label">Nombre(s)</label>
+                <input type="text" class="form-control" id="exampleInputusuario" aria-describedby="usuarioHelp">
+                <div id="usuarioHelp" class="form-text">Ingrese su(s) nombre(s)</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputApellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="exampleInputApellidos" aria-describedby="apellidosHelp">
+                <div id="apellidosHelp" class="form-text">Ingrese sus apellidos</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Confirme contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword2">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear cuenta</button>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Mes de nacimiento
+                </button>
+                <ul class="dropdown-menu" id="mesDropdown">
+                    <li><a class="dropdown-item" href="#">Enero</a></li>
+                    <li><a class="dropdown-item" href="#">Febrero</a></li>
+                    <li><a class="dropdown-item" href="#">Marzo</a></li>
+                    <li><a class="dropdown-item" href="#">Abril</a></li>
+                    <li><a class="dropdown-item" href="#">Mayo</a></li>
+                    <li><a class="dropdown-item" href="#">Junio</a></li>
+                    <li><a class="dropdown-item" href="#">Julio</a></li>
+                    <li><a class="dropdown-item" href="#">Agosto</a></li>
+                    <li><a class="dropdown-item" href="#">Septiembre</a></li>
+                    <li><a class="dropdown-item" href="#">Octubre</a></li>
+                    <li><a class="dropdown-item" href="#">Noviembre</a></li>
+                    <li><a class="dropdown-item" href="#">Diciembre</a></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-lg" type="button">
+                    Año de nacimiento
+                </button>
+                <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" id="anioDropdown">
+                    <li><a class="dropdown-item" href="#">2000</a></li>
+                    <li><a class="dropdown-item" href="#">2001</a></li>
+                    <li><a class="dropdown-item" href="#">2002</a></li>
+                    <li><a class="dropdown-item" href="#">2003</a></li>
+                    <li><a class="dropdown-item" href="#">2004</a></li>
+                    <li><a class="dropdown-item" href="#">2005</a></li>
+                    <li><a class="dropdown-item" href="#">2006</a></li>
+                    <li><a class="dropdown-item" href="#">2007</a></li>
+                    <li><a class="dropdown-item" href="#">2008</a></li>
+                    <li><a class="dropdown-item" href="#">2009</a></li>
+                    <li><a class="dropdown-item" href="#">2010</a></li>
+                    <li><a class="dropdown-item" href="#">2011</a></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function guardarRegistro(nombre, apellidos, contrasena, mes, anio) {
+            const registros = JSON.parse(localStorage.getItem('registros')) || [];
+            registros.push({ nombre, apellidos, contrasena, mes, anio });
+            localStorage.setItem('registros', JSON.stringify(registros));
+        }
+
+        function cargarOpciones() {
+            const registros = JSON.parse(localStorage.getItem('registros')) || [];
+            const mesDropdown = document.getElementById('mesDropdown');
+            const anioDropdown = document.getElementById('anioDropdown');
+
+            if (registros.length > 0) {
+                const ultimoRegistro = registros[registros.length - 1];
+                document.getElementById('exampleInputusuario').value = ultimoRegistro.nombre;
+                document.getElementById('exampleInputApellidos').value = ultimoRegistro.apellidos;
+                document.getElementById('exampleInputPassword1').value = ultimoRegistro.contrasena;
+                document.getElementById('exampleInputPassword2').value = ultimoRegistro.contrasena;
+                document.querySelectorAll('#mesDropdown a').forEach(option => {
+                    if (option.textContent === ultimoRegistro.mes) {
+                        option.classList.add('active');
+                    }
+                });
+                document.querySelectorAll('#anioDropdown a').forEach(option => {
+                    if (option.textContent === ultimoRegistro.anio) {
+                        option.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        document.getElementById('registroForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('exampleInputusuario').value;
+            const apellidos = document.getElementById('exampleInputApellidos').value;
+            const contrasena = document.getElementById('exampleInputPassword1').value;
+            const mes = document.querySelector('#mesDropdown .active')?.textContent || '';
+            const anio = document.querySelector('#anioDropdown .active')?.textContent || '';
+
+            guardarRegistro(nombre, apellidos, contrasena, mes, anio);
+
+            alert('¡Registro guardado con éxito!');
+            cargarOpciones();
+        });
+
+        cargarOpciones();
+    </script>
+</body>
+{% endblock %}
