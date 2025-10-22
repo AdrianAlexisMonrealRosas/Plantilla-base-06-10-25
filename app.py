@@ -22,7 +22,7 @@ def maravillas():
 def acerca():
     return render_template('acerca.html', active_page='acerca')
 
-@app.route('/')
+@app.route('/registro')
 def inicio():
     return render_template('registro.html', active_page='registro')
 
