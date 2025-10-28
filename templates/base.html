@@ -47,6 +47,16 @@
     </div>
   </nav>
 
+  {% if session.get('usuario') %}
+    <span class="mx-3 text-primary">Hola, {{ session['usuario'] }} 👋</span>
+    <a href="{{ url_for('logout') }}" class="mx-3 text-danger text-decoration-none">⤶ Salir</a>
+{% else %}
+    <a href="{{ url_for('login') }}" class="mx-3 text-dark text-decoration-none">⤷ Acceder</a>
+    <a href="{{ url_for('interfaz') }}" class="mx-3 text-dark text-decoration-none">⤷ Crear cuenta</a>
+{% endif %}
+</nav>
+
+
   <main class="container my-5">
     {% block content %}
     {% endblock %}

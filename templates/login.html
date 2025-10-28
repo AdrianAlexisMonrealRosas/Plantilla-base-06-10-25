@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Acceso de Usuario{% endblock %}
+
+{% block content %}
+<div class="container mt-4 p-4 border border-2 border-primary-subtle rounded shadow-sm" style="max-width: 500px;">
+    <h2 class="text-center mb-4 text-primary fw-bold">Bienvenido de nuevo</h2>
+
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="mb-3">
+            <label for="usuario" class="form-label fw-semibold">Correo o nombre de usuario</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                id="usuario" 
+                name="usuario" 
+                placeholder="Ejemplo: correo@dominio.com" 
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label fw-semibold">Contraseña</label>
+            <input 
+                type="password" 
+                class="form-control" 
+                id="password" 
+                name="password" 
+                placeholder="••••••••" 
+                required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mt-3">Iniciar sesión</button>
+
+        <div class="text-center mt-3">
+            <small>¿No tienes cuenta? 
+                <a href="{{ url_for('interfaz') }}" class="text-decoration-none text-primary fw-semibold">
+                    Regístrate aquí
+                </a>
+            </small>
+        </div>
+    </form>
+</div>
+{% endblock %}
